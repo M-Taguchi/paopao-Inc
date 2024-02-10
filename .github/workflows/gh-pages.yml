@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Bun Build 
         uses: oven-sh/setup-bun@v1
-        run: |
+      - run: |
           bun install
           bun run build
       - name: Upload Artifact
