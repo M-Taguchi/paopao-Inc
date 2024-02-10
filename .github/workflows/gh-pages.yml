@@ -8,16 +8,20 @@ on:
 
 jobs:
   build:
-    runs-on: oven-sh/setup-bun@v1
+    runs-on: ubuntu-latest
     steps:
-      - run: |
+      - name: Bun Build 
+        uses: oven-sh/setup-bun@v1
+        run: |
           bun install
           bun run build
-      - uses: actions/upload-artifact@v3
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
         with:
           name: paopao-inc-site
           path: dist
-      - uses: actions/upload-pages-artifact@v1
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v1
         with:
           path: dist
 
