@@ -14,7 +14,7 @@ export const Home = () => {
         justify-content: center;
     `
     const text = css`
-        background: url(${import.meta.env.VITE_STATIC_PATH}/frame.svg) no-repeat;
+        background: url(${import.meta.env.PROD ? "." : "public"}/frame.svg) no-repeat;
         background-size: 512px 300px;
         width: 512px;
         height: 300px;
