@@ -17,7 +17,8 @@ jobs:
       - run: |
           bun init
           bun install
-          bun run build
+      - run: bun run build
+        env: VITE_STATIC_PATH: ${{ secrets.VITE_STATIC_PATH }}
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
