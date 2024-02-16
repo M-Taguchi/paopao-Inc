@@ -1,4 +1,4 @@
 import { toSSG } from "hono/bun";
-import app from "./index";
+import app from "./src/index";
 
 toSSG(app);

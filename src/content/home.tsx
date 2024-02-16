@@ -1,5 +1,6 @@
 import { Layout } from "../Layout"
 import { css } from "hono/css"
+import frameSvg from "public/frame.svg"
 
 export const Home = () => {
     const style = css`
@@ -14,7 +15,7 @@ export const Home = () => {
         justify-content: center;
     `
     const text = css`
-        background: url('/public/images/frame.svg') no-repeat;
+        background: url(${frameSvg}) no-repeat;
         background-size: 512px 300px;
         width: 512px;
         height: 300px;
