@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [
     ssg(),
     devServer({
-      entry: 'src/index.tsx'
+      entry: 'index.tsx'
     })
   ]
 })
