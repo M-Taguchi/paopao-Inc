@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "bun run --hot src/index.tsx",
     "build": "vite build",
     "preview": "wrangler pages dev dist",
     "deploy": "$npm_execpath run build && wrangler pages deploy dist"
