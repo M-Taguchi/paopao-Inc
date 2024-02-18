@@ -1,13 +1,25 @@
 import { Layout } from "../Layout"
 import { css } from "hono/css"
+import { fadeInOutAnimation, slideBottomFadeInAnimation } from "../animation"
+import { primary } from "../color"
 
 export const Home = () => {
-    const style = css`
-        color: red;
+    const firstViewImage = css`
+        position: absolute;
+        z-index: calc(infinity);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-name: ${fadeInOutAnimation};
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
     `
     const main = css`
         padding-left: 48px;
         padding-right: 48px;
+        width: 100%;
+        height: 100%;
+        background-color: ${primary[50]};
     `
     const flex = css`
         display: flex;
@@ -20,16 +32,61 @@ export const Home = () => {
         height: 300px;
         text-align: center;
         padding: 24px;
+        animation-name: ${slideBottomFadeInAnimation};
+        opacity: 0;
+        transition: all 1.3s 0s ease-out;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    `
+    const box = css`
+        height: 16px;
+    `
+    const textAlignLeft = css`
+        text-align: left;
+    `
+    const indent = css`
+        text-align: left;
+        display: flex;
+    `
+    const width100 = css`
+        width: 100px;
     `
     return (
         <Layout title="Home">
-            <div class={style}>Homeページあるよ！</div>
+            <img class={firstViewImage} src={`${import.meta.env.PROD ? "." : "public"}/paopao-fulllength.png`} width={512} height={512} />
             <div class={main}>
+              {/* 執筆した本の紹介 */}
               <div class={flex}>
                 <div class={text}>
-                    <span>
-                        紹介文を書く
-                    </span>
+                    <h2>
+                        今まで書いた本
+                    </h2>
+                    <div class={box} />
+                    <p class={textAlignLeft}>
+                        🚧技術書展16に向けて絶賛執筆中ネ！
+                    </p>
+                </div>
+              </div>
+              {/* コンタクト */}
+              <div class={flex}>
+                <div class={text}>
+                    <h2>
+                        お問い合わせ
+                    </h2>
+                    <div class={box} />
+                    <p class={indent}>
+                        <span class={width100}>
+                            サークル名: 
+                        </span>
+                        馬主に飼われてます
+                    </p>
+                    <p class={indent}>
+                        <span class={width100}>
+                        EMAIL: 
+                        </span>
+                        banushi.slaves@gmail.com
+                    </p>
                 </div>
               </div>
             </div>
