@@ -22,3 +22,12 @@ export const slideBottomFadeInAnimation = keyframes`
     transform: translate(0, 0);
   }
 `
+
+export const fadeInAnmation = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`

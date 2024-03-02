@@ -1,6 +1,6 @@
 import { Layout } from "../Layout"
 import { css } from "hono/css"
-import { fadeInOutAnimation, slideBottomFadeInAnimation } from "../animation"
+import { fadeInAnmation, fadeInOutAnimation, slideBottomFadeInAnimation } from "../animation"
 import { primary } from "../color"
 
 export const Home = () => {
@@ -12,6 +12,19 @@ export const Home = () => {
         transform: translate(-50%, -50%);
         animation-name: ${fadeInOutAnimation};
         animation-duration: 2s;
+        animation-fill-mode: forwards;
+    `
+    const sideImage = css`
+        display: inline-block;
+        position: fixed;
+        top: 50%;
+        z-index: calc(infinity);
+        transform: translateY(-50%);
+        opacity: 0;
+        animation-name: ${fadeInAnmation};
+        transition: all 1.3s 0s ease-out;
+        animation-duration: 2s;
+        animation-delay: 2s;
         animation-fill-mode: forwards;
     `
     const main = css`
@@ -54,7 +67,8 @@ export const Home = () => {
     `
     return (
         <Layout title="Home">
-            <img class={firstViewImage} src={`${import.meta.env.PROD ? "." : "public"}/paopao-fulllength.png`} width={512} height={512} />
+            <img class={firstViewImage} src={`${import.meta.env.PROD ? "." : "public"}/paopao-face.png`} width={512} height={512} />
+            <img class={sideImage} src={`${import.meta.env.PROD ? "." : "public"}/paopao-fulllength.png`} width={300} />
             <div class={main}>
               {/* 執筆した本の紹介 */}
               <div class={flex}>
