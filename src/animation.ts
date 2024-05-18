@@ -1,4 +1,4 @@
-import { keyframes } from 'hono/css'
+import { keyframes } from "hono/css";
 
 export const fadeInOutAnimation = keyframes`
 0% {
@@ -10,7 +10,7 @@ export const fadeInOutAnimation = keyframes`
 100% {
   opacity: 0;
 }
-`
+`;
 
 export const slideBottomFadeInAnimation = keyframes`
   from {
@@ -21,7 +21,7 @@ export const slideBottomFadeInAnimation = keyframes`
     opacity: 1;
     transform: translate(0, 0);
   }
-`
+`;
 
 export const fadeInAnmation = keyframes`
   from {
@@ -30,4 +30,4 @@ export const fadeInAnmation = keyframes`
   to {
     opacity: 1;
   }
-`
+`;
