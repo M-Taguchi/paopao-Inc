@@ -13,7 +13,6 @@ export const Home = () => {
     opacity: 0;
     transition: all 1.3s 0s ease-out;
     animation-duration: 2s;
-    animation-delay: 2s;
     animation-fill-mode: forwards;
   `;
   const main = css`
