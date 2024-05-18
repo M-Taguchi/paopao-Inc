@@ -16,20 +16,13 @@ export const Home = () => {
     animation-delay: 2s;
     animation-fill-mode: forwards;
   `;
-  const firstViewImage = css`
-    position: absolute;
-    z-index: calc(infinity);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation-name: ${fadeInOutAnimation};
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-  `;
   const main = css`
     padding-left: 48px;
     padding-right: 48px;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    min-width: 100%;
     background-color: ${primary[50]};
   `;
   const flex = css`
@@ -88,15 +81,7 @@ export const Home = () => {
 
   return (
     <Layout title="Home">
-      <div>
-        {/* 初期表示用：一定時間後に非表示 */}
-        <img
-          class={firstViewImage}
-          src={`${import.meta.env.PROD ? "." : "public"}/paopao-fulllength.png`}
-          width={512}
-          height={726}
-          alt="パオパオちゃんの全身"
-        />
+      <>
         <div class={main}>
           {/* 執筆した本の紹介 */}
           <div class={flex}>
@@ -178,7 +163,7 @@ export const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </>
     </Layout>
   );
 };
