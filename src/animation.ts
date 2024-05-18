@@ -9,6 +9,7 @@ export const fadeInOutAnimation = keyframes`
 }
 100% {
   opacity: 0;
+  display: none;
 }
 `;
 
@@ -23,7 +24,7 @@ export const slideBottomFadeInAnimation = keyframes`
   }
 `;
 
-export const fadeInAnmation = keyframes`
+export const fadeInAnimation = keyframes`
   from {
     opacity: 0;
   }

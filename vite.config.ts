@@ -3,10 +3,10 @@ import ssg from "@hono/vite-ssg";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-	plugins: [
-		ssg(),
-		devServer({
-			entry: "src/index.tsx",
-		}),
-	],
+  plugins: [
+    ssg(),
+    devServer({
+      entry: "src/index.tsx",
+    }),
+  ],
 });
