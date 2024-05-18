@@ -90,6 +90,8 @@ export const Home = () => {
               <a
                 class={cover}
                 href="https://techbookfest.org/product/37NM6Jnb5Hz0jy0fhXdvh6"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <img
                   src={`${
