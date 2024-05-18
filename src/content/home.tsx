@@ -71,14 +71,14 @@ export const Home = () => {
             <img class={sideImage} src={`${import.meta.env.PROD ? "." : "public"}/paopao-fulllength.png`} width={300} />
             <div class={main}>
               {/* 執筆した本の紹介 */}
-              <div class={flex}>
+                <div class={flex}>
                 <div class={text}>
                     <h2>
                         今まで書いた本
                     </h2>
                     <div class={box} />
                     <p class={textAlignLeft}>
-                        🚧技術書展16に向けて絶賛執筆中ネ！
+                            🚧技術書展16に向けて絶賛執筆中ネ！aaaa
                     </p>
                 </div>
               </div>
